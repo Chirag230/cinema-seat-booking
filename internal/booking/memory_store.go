@@ -22,6 +22,7 @@ func (s *MemoryStore) Book(b Booking) error {
 }
 
 func (s *MemoryStore) ListBookings(movieID string) []Booking {
+	//retrieves all bookings for a particular movie from the store.
 	var result []Booking
 	for _, b := range s.bookings {
 		if b.MovieID == movieID {
